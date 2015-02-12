@@ -1,0 +1,419 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<title>Message (Samsung MultiScreen Android API)</title>
+<link rel="stylesheet" type="text/css" href="../../../styles.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Message (Samsung MultiScreen Android API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../com/samsung/multiscreen/package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/Message.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../com/samsung/multiscreen/MDNSSearchProvider.html" title="class in com.samsung.multiscreen"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../com/samsung/multiscreen/MSFDSearchProvider.html" title="class in com.samsung.multiscreen"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?com/samsung/multiscreen/Message.html" target="_top">Frames</a></li>
+<li><a href="Message.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.samsung.multiscreen</div>
+<h2 title="Class Message" class="title">Class Message</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>com.samsung.multiscreen.Message</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">Message</span>
+extends <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">Contains message data when communicating with MultiScreen-enabled devices. 
+ If the client is subscribed to a <a href="../../../com/samsung/multiscreen/Channel.html" title="class in com.samsung.multiscreen"><code>Channel</code></a> and has added a 
+ <a href="../../../com/samsung/multiscreen/Channel.OnMessageListener.html" title="interface in com.samsung.multiscreen"><code>Channel.OnMessageListener</code></a> via <a href="../../../com/samsung/multiscreen/Channel.html#addOnMessageListener(java.lang.String,%20com.samsung.multiscreen.Channel.OnMessageListener)"><code>Channel.addOnMessageListener(String, Channel.OnMessageListener)</code></a>, 
+ then this client will be notified when the host or other clients publish 
+ messages to the specified event channel.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Message.html#TARGET_ALL">TARGET_ALL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Message.html#TARGET_BROADCAST">TARGET_BROADCAST</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Message.html#TARGET_HOST">TARGET_HOST</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Message.html#equals(java.lang.Object)">equals</a></strong>(<a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../com/samsung/multiscreen/Channel.html" title="class in com.samsung.multiscreen">Channel</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Message.html#getChannel()">getChannel</a></strong>()</code>
+<div class="block">Returns the channel that this message is associated with.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Message.html#getData()">getData</a></strong>()</code>
+<div class="block">The data for this message.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Message.html#getEvent()">getEvent</a></strong>()</code>
+<div class="block">Returns the channel event for this message.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Message.html#getFrom()">getFrom</a></strong>()</code>
+<div class="block">The originating client for this message.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Message.html#getPayload()">getPayload</a></strong>()</code>
+<div class="block">The binary payload for this message.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Message.html#hashCode()">hashCode</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Message.html#toString()">toString</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="TARGET_BROADCAST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TARGET_BROADCAST</h4>
+<pre>public static final&nbsp;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TARGET_BROADCAST</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#com.samsung.multiscreen.Message.TARGET_BROADCAST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TARGET_ALL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TARGET_ALL</h4>
+<pre>public static final&nbsp;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TARGET_ALL</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#com.samsung.multiscreen.Message.TARGET_ALL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TARGET_HOST">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TARGET_HOST</h4>
+<pre>public static final&nbsp;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TARGET_HOST</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#com.samsung.multiscreen.Message.TARGET_HOST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getChannel()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getChannel</h4>
+<pre>@NonNull
+public&nbsp;<a href="../../../com/samsung/multiscreen/Channel.html" title="class in com.samsung.multiscreen">Channel</a>&nbsp;getChannel()</pre>
+<div class="block">Returns the channel that this message is associated with.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the channel</dd></dl>
+</li>
+</ul>
+<a name="getEvent()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEvent</h4>
+<pre>@NonNull
+public&nbsp;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getEvent()</pre>
+<div class="block">Returns the channel event for this message.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the channel event</dd></dl>
+</li>
+</ul>
+<a name="getData()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getData</h4>
+<pre>public&nbsp;<a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;getData()</pre>
+<div class="block">The data for this message.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the data</dd></dl>
+</li>
+</ul>
+<a name="getFrom()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFrom</h4>
+<pre>@NonNull
+public&nbsp;<a href="../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&nbsp;getFrom()</pre>
+<div class="block">The originating client for this message.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the source client</dd></dl>
+</li>
+</ul>
+<a name="getPayload()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPayload</h4>
+<pre>public&nbsp;byte[]&nbsp;getPayload()</pre>
+<div class="block">The binary payload for this message. May be null.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the binary payload, if any</dd></dl>
+</li>
+</ul>
+<a name="equals(java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(<a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="toString()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../com/samsung/multiscreen/package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/Message.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage"><em>Copyright &copy; 2015 Samsung. All rights reserved.</em></div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../com/samsung/multiscreen/MDNSSearchProvider.html" title="class in com.samsung.multiscreen"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../com/samsung/multiscreen/MSFDSearchProvider.html" title="class in com.samsung.multiscreen"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?com/samsung/multiscreen/Message.html" target="_top">Frames</a></li>
+<li><a href="Message.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><script>for(var i in document.links) {var link = document.links[i];console.log(link);if (!link.href||(link.hostname===document.location.hostname)) {continue;}if (link.href.indexOf("http") === 0) {link.target = "_blank";}}</script></small></p>
+</body>
+</html>

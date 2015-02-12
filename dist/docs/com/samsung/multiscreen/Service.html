@@ -1,0 +1,549 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<title>Service (Samsung MultiScreen Android API)</title>
+<link rel="stylesheet" type="text/css" href="../../../styles.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Service (Samsung MultiScreen Android API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../com/samsung/multiscreen/package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/Service.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../com/samsung/multiscreen/SearchProvider.html" title="class in com.samsung.multiscreen"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?com/samsung/multiscreen/Service.html" target="_top">Frames</a></li>
+<li><a href="Service.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.samsung.multiscreen</div>
+<h2 title="Class Service" class="title">Class Service</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>com.samsung.multiscreen.Service</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">Service</span>
+extends <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">Encapsulates a MultiScreen-enabled service. Also provides the entry point 
+ for communication with services. May be created when services are discovered 
+ via <a href="../../../com/samsung/multiscreen/Search.html" title="class in com.samsung.multiscreen"><code>Search</code></a>, or by <a href="../../../com/samsung/multiscreen/Service.html#getByURI(android.net.Uri,%20com.samsung.multiscreen.Result)"><code>getByURI(Uri, Result)</code></a> and 
+ <a href="../../../com/samsung/multiscreen/Service.html#getById(android.content.Context,%20java.lang.String,%20com.samsung.multiscreen.Result)"><code>getById(Context, String, Result)</code></a>, if the service url or id 
+ are known and specified, respectively.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../com/samsung/multiscreen/Application.html" title="class in com.samsung.multiscreen">Application</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#createApplication(java.lang.String,%20java.lang.String)">createApplication</a></strong>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id,
+                 <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;channelId)</code>
+<div class="block">Create an application with the given app and channel id.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../com/samsung/multiscreen/Application.html" title="class in com.samsung.multiscreen">Application</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#createApplication(java.lang.String,%20java.lang.String,%20java.util.Map)">createApplication</a></strong>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id,
+                 <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;channelId,
+                 <a href="http://d.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;startArgs)</code>
+<div class="block">Create an application with the given app and channel id.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../com/samsung/multiscreen/Application.html" title="class in com.samsung.multiscreen">Application</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#createApplication(android.net.Uri,%20java.lang.String)">createApplication</a></strong>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+                 <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;channelId)</code>
+<div class="block">Create an application with the given uri and channel id.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../com/samsung/multiscreen/Application.html" title="class in com.samsung.multiscreen">Application</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#createApplication(android.net.Uri,%20java.lang.String,%20java.util.Map)">createApplication</a></strong>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+                 <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;channelId,
+                 <a href="http://d.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;startArgs)</code>
+<div class="block">Create an application with the given uri and channel id.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../com/samsung/multiscreen/Channel.html" title="class in com.samsung.multiscreen">Channel</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#createChannel(android.net.Uri)">createChannel</a></strong>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri)</code>
+<div class="block">Create a channel with the given uri.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#equals(java.lang.Object)">equals</a></strong>(<a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#getById(android.content.Context,%20java.lang.String,%20com.samsung.multiscreen.Result)">getById</a></strong>(<a href="http://d.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+       <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id,
+       <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Service.html" title="class in com.samsung.multiscreen">Service</a>&gt;&nbsp;result)</code>
+<div class="block">Retrieve the service given by the specified id.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#getByURI(android.net.Uri,%20int,%20com.samsung.multiscreen.Result)">getByURI</a></strong>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+        int&nbsp;timeout,
+        <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Service.html" title="class in com.samsung.multiscreen">Service</a>&gt;&nbsp;result)</code>
+<div class="block">Retrieve the service given by the specified uri.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#getByURI(android.net.Uri,%20com.samsung.multiscreen.Result)">getByURI</a></strong>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+        <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Service.html" title="class in com.samsung.multiscreen">Service</a>&gt;&nbsp;result)</code>
+<div class="block">Retrieve the service given by the specified uri.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#getDeviceInfo(com.samsung.multiscreen.Result)">getDeviceInfo</a></strong>(<a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Device.html" title="class in com.samsung.multiscreen">Device</a>&gt;&nbsp;callback)</code>
+<div class="block">Retrieve the underlying device information for the specified service.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#getId()">getId</a></strong>()</code>
+<div class="block">Returns the id for this service.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#getName()">getName</a></strong>()</code>
+<div class="block">Returns the name for this service.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#getType()">getType</a></strong>()</code>
+<div class="block">Returns the type for this service.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#getUri()">getUri</a></strong>()</code>
+<div class="block">Returns the endpoint uri for this service.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#getVersion()">getVersion</a></strong>()</code>
+<div class="block">Returns the version for this service.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#hashCode()">hashCode</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../com/samsung/multiscreen/Search.html" title="class in com.samsung.multiscreen">Search</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#search(android.content.Context)">search</a></strong>(<a href="http://d.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</code>
+<div class="block">Get an instance of <a href="../../../com/samsung/multiscreen/Search.html" title="class in com.samsung.multiscreen"><code>Search</code></a> for service discovery.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Service.html#toString()">toString</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="search(android.content.Context)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>search</h4>
+<pre>public static&nbsp;<a href="../../../com/samsung/multiscreen/Search.html" title="class in com.samsung.multiscreen">Search</a>&nbsp;search(<a href="http://d.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</pre>
+<div class="block">Get an instance of <a href="../../../com/samsung/multiscreen/Search.html" title="class in com.samsung.multiscreen"><code>Search</code></a> for service discovery.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the context for the search</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an <a href="../../../com/samsung/multiscreen/Search.html" title="class in com.samsung.multiscreen"><code>Search</code></a> instance</dd></dl>
+</li>
+</ul>
+<a name="getByURI(android.net.Uri, com.samsung.multiscreen.Result)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getByURI</h4>
+<pre>public static&nbsp;void&nbsp;getByURI(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+            <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Service.html" title="class in com.samsung.multiscreen">Service</a>&gt;&nbsp;result)</pre>
+<div class="block">Retrieve the service given by the specified uri.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>uri</code> - the uri of the service</dd><dd><code>result</code> - the callback to invoke, if the service is retrieved.</dd></dl>
+</li>
+</ul>
+<a name="getByURI(android.net.Uri, int, com.samsung.multiscreen.Result)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getByURI</h4>
+<pre>public static&nbsp;void&nbsp;getByURI(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+            int&nbsp;timeout,
+            <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Service.html" title="class in com.samsung.multiscreen">Service</a>&gt;&nbsp;result)</pre>
+<div class="block">Retrieve the service given by the specified uri.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>uri</code> - the uri of the service</dd><dd><code>timeout</code> - the timeout in milliseconds</dd><dd><code>result</code> - the callback to invoke, if the service is retrieved.</dd></dl>
+</li>
+</ul>
+<a name="getById(android.content.Context, java.lang.String, com.samsung.multiscreen.Result)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getById</h4>
+<pre>public static&nbsp;void&nbsp;getById(<a href="http://d.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+           <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id,
+           <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Service.html" title="class in com.samsung.multiscreen">Service</a>&gt;&nbsp;result)</pre>
+<div class="block">Retrieve the service given by the specified id.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - the context for execution</dd><dd><code>id</code> - the id for the service to retrieve</dd><dd><code>result</code> - the callback to invoke, if the service is retrieved</dd></dl>
+</li>
+</ul>
+<a name="getDeviceInfo(com.samsung.multiscreen.Result)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDeviceInfo</h4>
+<pre>public&nbsp;void&nbsp;getDeviceInfo(<a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Device.html" title="class in com.samsung.multiscreen">Device</a>&gt;&nbsp;callback)</pre>
+<div class="block">Retrieve the underlying device information for the specified service.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>callback</code> - the callback to invoke, if the device info is retrieved</dd></dl>
+</li>
+</ul>
+<a name="createChannel(android.net.Uri)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createChannel</h4>
+<pre>public&nbsp;<a href="../../../com/samsung/multiscreen/Channel.html" title="class in com.samsung.multiscreen">Channel</a>&nbsp;createChannel(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri)</pre>
+<div class="block">Create a channel with the given uri.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>uri</code> - the uri for the channel</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a channel instance for the given uri</dd></dl>
+</li>
+</ul>
+<a name="createApplication(android.net.Uri, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createApplication</h4>
+<pre>public&nbsp;<a href="../../../com/samsung/multiscreen/Application.html" title="class in com.samsung.multiscreen">Application</a>&nbsp;createApplication(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+                            <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;channelId)</pre>
+<div class="block">Create an application with the given uri and channel id.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>uri</code> - the uri for the application</dd><dd><code>channelId</code> - the id to use for the channel</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an application instance for the given uri</dd></dl>
+</li>
+</ul>
+<a name="createApplication(android.net.Uri, java.lang.String, java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createApplication</h4>
+<pre>public&nbsp;<a href="../../../com/samsung/multiscreen/Application.html" title="class in com.samsung.multiscreen">Application</a>&nbsp;createApplication(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+                            <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;channelId,
+                            <a href="http://d.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;startArgs)</pre>
+<div class="block">Create an application with the given uri and channel id.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>uri</code> - the uri for the application</dd><dd><code>channelId</code> - the id to use for the channel</dd><dd><code>startArgs</code> - arguments to pass to the application on start</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an application instance for the given uri</dd></dl>
+</li>
+</ul>
+<a name="createApplication(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createApplication</h4>
+<pre>public&nbsp;<a href="../../../com/samsung/multiscreen/Application.html" title="class in com.samsung.multiscreen">Application</a>&nbsp;createApplication(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id,
+                            <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;channelId)</pre>
+<div class="block">Create an application with the given app and channel id.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>id</code> - the id for the application</dd><dd><code>channelId</code> - the id to user for the channel</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an application instance for the given id</dd></dl>
+</li>
+</ul>
+<a name="createApplication(java.lang.String, java.lang.String, java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createApplication</h4>
+<pre>public&nbsp;<a href="../../../com/samsung/multiscreen/Application.html" title="class in com.samsung.multiscreen">Application</a>&nbsp;createApplication(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id,
+                            <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;channelId,
+                            <a href="http://d.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;startArgs)</pre>
+<div class="block">Create an application with the given app and channel id.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>id</code> - the id for the application</dd><dd><code>channelId</code> - the id to use for the channel</dd><dd><code>startArgs</code> - arguments to pass to the application on start</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an application instance for the given id</dd></dl>
+</li>
+</ul>
+<a name="getId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getId</h4>
+<pre>public&nbsp;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getId()</pre>
+<div class="block">Returns the id for this service.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the id</dd></dl>
+</li>
+</ul>
+<a name="getVersion()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getVersion</h4>
+<pre>public&nbsp;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getVersion()</pre>
+<div class="block">Returns the version for this service.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the version</dd></dl>
+</li>
+</ul>
+<a name="getName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getName</h4>
+<pre>public&nbsp;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getName()</pre>
+<div class="block">Returns the name for this service.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the name</dd></dl>
+</li>
+</ul>
+<a name="getType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getType</h4>
+<pre>public&nbsp;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getType()</pre>
+<div class="block">Returns the type for this service.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the type</dd></dl>
+</li>
+</ul>
+<a name="getUri()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUri</h4>
+<pre>public&nbsp;<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;getUri()</pre>
+<div class="block">Returns the endpoint uri for this service.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the uri</dd></dl>
+</li>
+</ul>
+<a name="toString()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals(java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(<a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../com/samsung/multiscreen/package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/Service.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage"><em>Copyright &copy; 2015 Samsung. All rights reserved.</em></div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../com/samsung/multiscreen/SearchProvider.html" title="class in com.samsung.multiscreen"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?com/samsung/multiscreen/Service.html" target="_top">Frames</a></li>
+<li><a href="Service.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><script>for(var i in document.links) {var link = document.links[i];console.log(link);if (!link.href||(link.hostname===document.location.hostname)) {continue;}if (link.href.indexOf("http") === 0) {link.target = "_blank";}}</script></small></p>
+</body>
+</html>

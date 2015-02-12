@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<title>Overview (Samsung MultiScreen Android API)</title>
+<link rel="stylesheet" type="text/css" href="styles.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Overview (Samsung MultiScreen Android API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li class="navBarCell1Rev">Overview</li>
+<li><a href="com/samsung/multiscreen/package-summary.html">Package</a></li>
+<li>Class</li>
+<li>Use</li>
+<li><a href="overview-tree.html">Tree</a></li>
+<li><a href="deprecated-list.html">Deprecated</a></li>
+<li><a href="index-all.html">Index</a></li>
+<li><a href="help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="index.html?overview-summary.html" target="_top">Frames</a></li>
+<li><a href="overview-summary.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<div class="header">
+<h1 class="title">Samsung MultiScreen Android API</h1>
+</div>
+<div class="header">
+<div class="subTitle">
+<div class="block"><div class="overview"></div>
+</div>
+<p>See: <a href="#overview_description">Description</a></p>
+</div>
+<div class="contentContainer">
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Packages table, listing packages, and an explanation">
+<caption><span>Packages</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Package</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="com/samsung/multiscreen/package-summary.html">com.samsung.multiscreen</a></td>
+<td class="colLast">
+<div class="block">Contains classes for using the MultiScreen SDK Android API</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="footer"><a name="overview_description">
+<!--   -->
+</a>
+<div class="subTitle">
+<div class="block"><div class="overview">
+<p>This API is the Android component of the MultiScreen SDK.
+For more information, see the <a href="http://multiscreen.samsung.com">MultiScreen SDK</a> and <a href="http://www.samsungdforum.com">Samsung Developer Forum</a>.</p>
+<h2 id="include-in-your-android-project">Include in your Android project</h2>
+<p>Copy <code>/dist/android-msf-api-2.x.x.jar</code> to your libs folder and link as normal.
+Supports Eclipse or Android Studio projects.</p>
+<p><strong>Note:</strong></p>
+<p>The <code>/dist/android-msf-api-lite-2.x.x.jar</code> jar contains the MultiScreen SDK API without the necessary dependencies.</p>
+<h2 id="javadocs">Javadocs</h2>
+<p>API reference docs are <a href="http://multiscreensdk.github.io/android-msf-api/apidocs/index.html">online</a> and included in <code>/dist/docs/</code>.</p>
+<h1 id="api-usage">API Usage</h1>
+<p>The API supports three main features:</p>
+<ul>
+<li><strong>Discover</strong>: Discover a compatible Samsung SmartTV on your network</li>
+<li><strong>Connect</strong>: Connect and launch applications on the SmartTV</li>
+<li><strong>Communicate</strong>: Communicate with a SmartTV application and other mobile devices.</li>
+</ul>
+<h2 id="discover">Discover</h2>
+<p>You can discover a compatible Samsung SmartTV on your network using the <a href="http://multiscreensdk.github.io/android-msf-api/apidocs/com/samsung/multiscreen/Search.html">Search</a> class. The workflow is:</p>
+<ol>
+<li>Start the Discovery Process</li>
+<li>Listen for events indicating services added/removed.</li>
+<li>Stop the Discovery Process</li>
+</ol>
+<p>Generally, while the discovery process is running, you should display a list of discovered services to your user, and allow them to select one. You can get a list of the discovered services at any time, even after the discovery process is stopped.</p>
+<p>Example:</p>
+<pre><code class="lang-java">
+    <span class="hljs-comment">// Get an instance of Search</span>
+    Search search = Service.search(getContext());
+
+    <span class="hljs-comment">// Add a listener for the service found event</span>
+    search.setOnServiceFoundListener(
+        <span class="hljs-keyword">new</span> OnServiceFoundListener() {
+
+            <span class="hljs-annotation">&#64;Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFound</span><span class="hljs-params">(Service service)</span> </span>{
+                Log.d(LOGTAG, <span class="hljs-string">"Search.onFound() service: "</span> + service.toString());
+
+                <span class="hljs-comment">// Add service to a displayed list where your user can select one.</span>
+                <span class="hljs-comment">// For display, we recommend that you show: service.getName()</span>
+            }
+        }
+    );
+
+    <span class="hljs-comment">// Add a listener for the service lost event</span>
+    search.setOnServiceLostListener(
+        <span class="hljs-keyword">new</span> OnServiceLostListener() {
+
+            <span class="hljs-annotation">&#64;Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLost</span><span class="hljs-params">(Service service)</span> </span>{
+                Log.d(LOGTAG, <span class="hljs-string">"Search.onLost() service: "</span> + service.toString());
+
+                <span class="hljs-comment">// Remove this service from the displayed list.</span>
+            }
+        }
+    );
+
+    <span class="hljs-comment">// Start the discovery process</span>
+    search.start();
+
+    <span class="hljs-comment">// Do something while we wait for services to be discovered.</span>
+    ...
+
+    <span class="hljs-comment">// Stop the discovery process after some amount of time, preferably once the user </span>
+    <span class="hljs-comment">// has selected a service to work with.</span>
+    search.stop();
+</code></pre>
+<h2 id="connect">Connect</h2>
+<p>Once a device or &quot;service&quot; has been discovered, you can interact with the service to get additional information about the device, or start, stop, install, and retrieve information about applications. Both installed applications and cloud applications can be launched.</p>
+<p>Example:</p>
+<pre><code class="lang-java">
+    <span class="hljs-comment">// Example uri</span>
+    Uri url = Uri.parse(<span class="hljs-string">"http://dev-multiscreen-examples.s3-website-us-west-1.amazonaws.com/examples/helloworld/tv/"</span>); 
+
+    <span class="hljs-comment">// Example channel id</span>
+    <span class="hljs-comment">// Note: We recommend that you use a reverse domain style id for your </span>
+    <span class="hljs-comment">// channel to prevent collisions.</span>
+    String channelId = <span class="hljs-string">"com.samsung.multiscreen.helloworld"</span>;
+
+    <span class="hljs-comment">// Get an instance of Application.</span>
+    Application application = service.createApplication(url, channelId);
+
+    <span class="hljs-comment">// Listen for the connect event</span>
+    application.setOnConnectListener(<span class="hljs-keyword">new</span> OnConnectListener() {
+
+        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onConnect</span><span class="hljs-params">(Client client)</span> </span>{
+            Log.d(LOGTAG, <span class="hljs-string">"Application.onConnect() client: "</span> + client.toString());                
+        }
+    });
+
+    <span class="hljs-comment">// Connect and launch the application.</span>
+    <span class="hljs-comment">// When you connect to a service, the specified application will </span>
+    <span class="hljs-comment">// be launched automatically.</span>
+    application.connect(<span class="hljs-keyword">new</span> Result&lt;Client&gt;() {
+
+        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(Client client)</span> </span>{
+            Log.d(LOGTAG, <span class="hljs-string">"Application connect onSuccess() client: "</span> + client.toString());
+
+            <span class="hljs-comment">// The application is launched, and is ready to accept </span>
+            <span class="hljs-comment">// messages.</span>
+        }
+
+        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(Error error)</span> </span>{
+            Log.d(LOGTAG, <span class="hljs-string">"Application connect onError() error: "</span> + error.toString());
+
+            <span class="hljs-comment">// Uh oh. Handle the error.</span>
+        }
+    );
+</code></pre>
+<h2 id="communicate">Communicate</h2>
+<p>After connecting and launching the application on the TV, otherwise known as the host, the client can now publish both text and binary messages to any and/or all connected clients.</p>
+<h3 id="publishing-messages">Publishing Messages</h3>
+<p>To send or publish a message, the client must supply:</p>
+<ol>
+<li><strong>Message Event</strong>: Application defined event describing the message</li>
+<li><strong>Message Data</strong>: A string or object representing the message data</li>
+</ol>
+<p>Example:</p>
+<pre><code class="lang-java">
+    <span class="hljs-comment">// Note: The TV application is designated as the "HOST"</span>
+    String event = <span class="hljs-string">"say"</span>;
+    String messageData = <span class="hljs-string">"Hello World!"</span>;
+
+    <span class="hljs-comment">// Send a message to the TV application only, by default.</span>
+    application.publish(event, messageData);
+
+    <span class="hljs-comment">// Send a message to the TV application, explicitly.</span>
+    application.publish(event, messageData, Message.TARGET_HOST);
+
+    <span class="hljs-comment">// Send a "broadcast" message to all connected clients EXCEPT yourself. </span>
+    application.publish(event, messageData, Message.TARGET_BROADCAST);
+
+    <span class="hljs-comment">// Send a message to all clients INCLUDING yourself </span>
+    application.publish(event, messageData, Message.TARGET_ALL);
+
+    <span class="hljs-comment">// Send a message to a specific client</span>
+    String clientId = <span class="hljs-string">"123467"</span>; <span class="hljs-comment">// Assuming that this is a valid id of a connected client</span>
+    Client client = channel.getClients().get(clientId);
+    application.publish(event, messageData, client);
+
+    <span class="hljs-comment">// Send a message to a list of clients</span>
+    List&lt;Client&gt; clients = ... <span class="hljs-comment">// You can create any combination list of clients</span>
+    application.publish(event, messageData, clients);
+
+    <span class="hljs-comment">// Send a binary message to the TV application only, by default.</span>
+    <span class="hljs-keyword">byte</span>[] payload = {<span class="hljs-number">0x00</span>, <span class="hljs-number">0x01</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x03</span>};
+    application.publish(event, messageData, payload);
+</code></pre>
+<h3 id="receiving-messages">Receiving Messages</h3>
+<p>To receive a message on the connected channel, the client must simply add a message listener.</p>
+<p>Example:</p>
+<pre><code class="lang-java">
+    <span class="hljs-comment">// The event that this client is interested in receiving published messages.</span>
+    String event = <span class="hljs-string">"say"</span>;
+
+    <span class="hljs-comment">// Listen for a message by event</span>
+    application.addOnMessageListener(event, <span class="hljs-keyword">new</span> OnMessageListener() {
+
+        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(Message message)</span> </span>{
+            Log.d(LOGTAG, <span class="hljs-string">"Application.onMessage() message: "</span> + message.toString());
+
+            <span class="hljs-comment">// Got a message with some data or a binary payload.</span>
+        }
+    });
+</code></pre>
+<h2 id="advanced-options">Advanced Options</h2>
+<p>Advanced options are not required to be called by default, but may allow the developer flexibility in the design and implementation of the application.</p>
+<h3 id="disconnect">disconnect</h3>
+<p>By default, the specified application will stop automatically when this is the last client to disconnect. To disable this behavior, call <code>disconnect(false, ...)</code>.</p>
+<p>Example:</p>
+<pre><code class="lang-java">
+    <span class="hljs-comment">// Disconnect from the application. The application will continue to run on the TV, even </span>
+    <span class="hljs-comment">// if this was the last connected client.</span>
+    application.disconnect(<span class="hljs-keyword">false</span>, <span class="hljs-keyword">new</span> Result&lt;Client&gt;() {
+
+        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(Client client)</span> </span>{
+            Log.d(LOGTAG, <span class="hljs-string">"Application disconnect onSuccess() client: "</span> + client.toString());
+
+            <span class="hljs-comment">// The application will continue to run on the TV.</span>
+        }
+
+        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(Error error)</span> </span>{
+            Log.d(LOGTAG, <span class="hljs-string">"Application disconnect onError() error: "</span> + error.toString());
+        }
+    });
+</code></pre>
+<h3 id="install">install</h3>
+<p>To install an application, you must create an application with the specified application id issued by Samsung when the application is submitted. See the <a href="http://www.samsungdforum.com/Support/Appsubmisson">App Submission</a> pages at the Samsung Developer Forum for more information on the app submission process.</p>
+<p>Example:</p>
+<pre><code class="lang-java">
+    <span class="hljs-comment">// Example app id</span>
+    String appId = <span class="hljs-string">"111299000796"</span>;
+
+    <span class="hljs-comment">// Example channel id</span>
+    String channelId = <span class="hljs-string">"com.samsung.multiscreen.helloworld"</span>;
+
+    <span class="hljs-comment">// Get an instance of Application. Then connect to the service</span>
+    Application application = service.createApplication(appId, channelId);
+
+    <span class="hljs-comment">// Install the application on the TV. Note: This will only bring up the installation page on the TV. </span>
+    <span class="hljs-comment">// The user will still have to acknowledge by selecting "install" using the TV remote.</span>
+    application.install(<span class="hljs-keyword">new</span> Result&lt;Boolean&gt;() {
+
+        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(Boolean result)</span> </span>{
+            Log.d(LOGTAG, <span class="hljs-string">"Application install onSuccess() result: "</span> + result.toString());
+
+            <span class="hljs-comment">// Application installed</span>
+        }
+
+        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(Error error)</span> </span>{
+            Log.d(LOGTAG, <span class="hljs-string">"Application install onError() error: "</span> + error.toString());
+
+            <span class="hljs-comment">// Uh oh. Handle the error.</span>
+        }
+    });
+</code></pre>
+<h1 id="build-instructions">Build Instructions</h1>
+<p>If you need to modify the code and/or build the project yourself, you can do this with gradle or maven. Both methods will output the jar and docs in the /dist folder.</p>
+<ul>
+<li><strong>Gradle</strong>: type: <code>gradle build dist javadoc</code></li>
+<li><strong>Maven</strong>: type: <code>mvn install javadoc:javadoc</code></li>
+</ul>
+<p><strong>Note:</strong></p>
+<p>For gradle builds, you will need to specify the Android API location in a &#39;local.properties&#39; file in the project root directory. Gradle will find the Android API <code>compileSdkVersion</code> defined in the &#39;build.gradle&#39; file in the specified directory.</p>
+<p>Example &#39;local.properties&#39;:</p>
+<pre><code class="lang-properties">
+    sdk.dir=/Users/plin/android-sdk
+</code></pre>
+<p>For maven builds, you will need to install the relevant Android API in a local repository and modify the <code>local.repo.path</code> in the Maven &#39;pom.xml&#39;. Also, ensure that the ANDROID_HOME environment variable is set to point to your Android SDK directory and the JDK &#39;tools.jar&#39; file is available. Modify the <code>jdk.tools.path</code> property accordingly. For Mac, using the default 1.6 JDK, the tools classes are located in the &#39;$JAVA_HOME/Classes/classes.jar&#39; file.</p>
+</div></div>
+</div>
+</div>
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li class="navBarCell1Rev">Overview</li>
+<li><a href="com/samsung/multiscreen/package-summary.html">Package</a></li>
+<li>Class</li>
+<li>Use</li>
+<li><a href="overview-tree.html">Tree</a></li>
+<li><a href="deprecated-list.html">Deprecated</a></li>
+<li><a href="index-all.html">Index</a></li>
+<li><a href="help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage"><em>Copyright &copy; 2015 Samsung. All rights reserved.</em></div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="index.html?overview-summary.html" target="_top">Frames</a></li>
+<li><a href="overview-summary.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><script>for(var i in document.links) {var link = document.links[i];console.log(link);if (!link.href||(link.hostname===document.location.hostname)) {continue;}if (link.href.indexOf("http") === 0) {link.target = "_blank";}}</script></small></p>
+</body>
+</html>
